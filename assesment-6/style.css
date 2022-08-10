@@ -158,9 +158,7 @@ a{
     
 }
 @media screen and (min-width:100px) and (max-width:500px) {
-    /* moto g4 */
     body,html{
-        /* height:100%; */
         margin:0;
         background-image: url("shara\ desert.jpg");
     }
@@ -285,7 +283,6 @@ a{
     
 }
 @media screen and (min-width:450px) and (max-width:900px) {
-    /* iPad */
     body,html{
         height:100%;
         margin:0;
