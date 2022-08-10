@@ -1,0 +1,395 @@
+body,html{
+    height:100%;
+    margin:0;
+    background-image: url("shara\ desert.jpg");
+    background-size: cover ;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+.container1{
+    display:flex;
+}
+.box1{
+    position:relative;
+    top:20px;
+    left:80px;
+    cursor:pointer;
+}
+.box2{
+    position:relative;
+    top:20px;
+    left:60%;
+    display:flex;
+    cursor:pointer;
+}
+.box2-1{
+    padding-top:13px;
+    font-weight: bolder;
+    color:white;
+}
+.box2-2{
+    padding-left:15%;
+    padding-top:13px;
+    font-weight: bolder;
+    color:white;
+}
+.box2-3{
+    padding-left:15%;
+    padding-top:13px;
+    font-weight: bolder;
+    color:white;
+}
+.box2-4{
+    padding-left:15%;
+}
+.parent{
+    display:flex;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.box3{
+    color:white;
+    font-size:100px;
+    position:relative;
+    left:80px;
+    top:100px;
+}
+.box3-1{
+    color:white;
+    font-weight:bolder;
+    position:relative;
+    left:80px;
+    top:60px;
+}
+.box3-2{
+    color:white;
+    font-weight:bolder;
+    position:relative;
+    left:80px;
+    top:60px;
+}
+.box3-3{
+    color:white;
+    font-weight:bolder;
+    position:relative;
+    left:80px;
+    top:60px;
+}
+.but{
+    width:180px;
+    color:#000;
+    font-size:12px;
+    font-weight:bolder;
+    padding:12px 0;
+    background:#fff;
+    border:0;
+    border-radius:20px;
+    margin-left:80px;
+    margin-top:60px;
+    cursor:pointer;
+}
+.container3{
+    position:relative;
+    left:10%;
+    top:20%;
+    bottom:10%;
+}
+.grid-container{
+    display:grid;
+    grid-template-columns:250px 250px;
+    grid-row-gap:40px;
+}
+.box{
+    border:1px solid black;
+    border-radius:10px;
+    width:200px;
+    height:200px;
+    cursor:pointer;
+    padding-left:10px;
+}
+.box:hover{
+    transform:translateY(-10px);
+}
+.card{
+    color:white;
+    font-size:x-large;
+    padding-top:10px;
+}
+.box5{
+    background-image:url(./pic-1.png);
+    background-size: cover;
+    grid-row: 1/2;
+    grid-column:1/2;
+    
+}
+.card1{
+    color:white;
+}
+.box6{
+    background-image:url(./pic-2.png);
+    background-size: cover;
+    grid-row: 1/2;
+    grid-column:2/3;
+}
+.card2{
+    color:white;
+    
+}
+.box7{
+    background-image:url(./pic-3.png);
+    background-size: cover;
+    grid-row: 2/3;
+    grid-column:1/2;
+}
+.card3{
+    color:white;
+    
+}
+.box8{
+    background-image:url(./pic-4.png);
+    background-size: cover;
+    grid-row: 2/3;
+    grid-column:2/3;
+}
+.card4{
+    color:white;
+    
+}
+@media screen and (min-width:100px) and (max-width:500px) {
+    /* moto g4 */
+    body,html{
+        /* height:100%; */
+        margin:0;
+        background-image: url("shara\ desert.jpg");
+    }
+    a{
+        text-decoration: none;
+        color:white;
+    }
+    .container1{
+        display:flex;
+    }
+    .box1{
+        position:relative;
+        top:30px;
+        left:30px;
+        cursor:pointer;
+        font-size: small;
+    }
+    .box2{
+        position:relative;
+        top:10px;
+        left:80%;
+        display:inline-block;
+        cursor:pointer;
+        font-size: smaller;
+    }
+    .img1{
+        width:50px;
+        height:50px;
+    }
+    .img2{
+        width:30px;
+        height:30px;
+    }
+    .box2-1{
+        padding-left:15%;
+        padding-top:5px;
+        font-weight:bold;
+        color:white;
+    }
+    .box2-2{
+        padding-left:15%;
+        padding-top:5px;
+        font-weight: bold;
+        color:white;
+    }
+    .box2-3{
+        padding-left:15%;
+        padding-top:5px;
+        font-weight: bold;
+        color:white;
+        display:inline-block;
+    }
+    .box2-4{
+       position:relative;
+       left:80px;
+       bottom:50px;
+    }
+    .parent{
+       position:relative;
+       left:-50px;
+       top:-130px;
+    }
+    .box3{
+        color:white;
+        font-size:30px;
+        position:relative;
+        left:80px;
+        top:100px;
+    }
+    .box3-1{
+        color:white;
+        font-weight:lighter;
+        position:relative;
+        left:80px;
+        top:70px;
+    }
+    .box3-2{
+        color:white;
+        font-weight:normal;
+        position:relative;
+        left:80px;
+        top:55px;
+    }
+    .box3-3{
+        color:white;
+        font-weight:normal;
+        position:relative;
+        left:80px;
+        top:41px;
+    }
+    .but{
+        width:140px;
+        color:#000;
+        font-size:12px;
+        font-weight:bolder;
+        padding:12px 0;
+        background:#fff;
+        border:0;
+        border-radius:20px;
+        margin-left:80px;
+        margin-top:30px;
+        cursor:pointer;
+    }
+    .container3{
+        position:relative;
+        /* left:50%; */
+        top:500%;
+        margin-top:350px;
+        margin-left: calc(-300px);
+    }
+    .grid-container{
+        display:inline;
+    }
+    .box{
+        border:1px solid black;
+        border-radius:10px;
+        width:200px;
+        height:200px;
+        cursor:pointer;
+        margin-top:30px;
+    }
+    
+}
+@media screen and (min-width:450px) and (max-width:900px) {
+    /* iPad */
+    body,html{
+        height:100%;
+        margin:0;
+        background-image: url("shara\ desert.jpg");
+    }
+    a{
+        text-decoration: none;
+        color:white;
+    }
+    .container1{
+        display:flex;
+    }
+    .box1{
+        position:relative;
+        top:30px;
+        left:70px;
+        cursor:pointer;
+        font-size: small;
+    }
+    .box2{
+        position:relative;
+        top:20px;
+        left: 355px;
+        display:flex;
+        cursor:pointer;
+    }
+    .parent{
+        position:relative;
+        left:-50px;
+        top:-130px;
+     }
+     .box3{
+         color:white;
+         font-size:40px;
+         position:relative;
+         left:120px;
+         top:130px;
+     }
+     .box3-1{
+         color:white;
+         font-weight:lighter;
+         position:relative;
+         left:120px;
+         top:100px;
+     }
+     .box3-2{
+         color:white;
+         font-weight:normal;
+         position:relative;
+         left:120px;
+         top:90px;
+     }
+     .box3-3{
+         color:white;
+         font-weight:normal;
+         position:relative;
+         left: 120px;
+         top:80px;
+     }
+     .but{
+         width:20s0px;
+         color:#000;
+         font-size:12px;
+         font-weight:bolder;
+         padding:12px 0;
+         background:#fff;
+         border:0;
+         border-radius:20px;
+         margin-left:120px;
+         margin-top:80px;
+         cursor:pointer;
+     }
+     .container3{
+         position:relative;
+         /* left:50%; */
+         top:500%;
+         margin-top:350px;
+         margin-left: calc(-340px);
+     }
+     .grid-container{
+         display:inline;
+     }
+     .box{
+         border:1px solid black;
+         border-radius:10px;
+         width:400px;
+         height:200px;
+         cursor:pointer;
+         margin-top:30px;
+     }
+     .box5{
+        background-image:url(./pic-1.png);
+        background-size: cover;
+    }
+    .box6{
+        background-image:url(./pic-2.png);
+        background-size: cover;
+    }
+    .box7{
+        background-image:url(./pic-3.png);
+        background-size: cover;
+    }
+    .box8{
+        background-image:url(./pic-4.png);
+        background-size: cover;
+    }
+}
