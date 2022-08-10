@@ -1,0 +1,124 @@
+.parent{
+
+    width: 800px;
+    align-items: center;
+}
+
+.child{
+    background-color: aqua;
+    width: 200px;
+    height: 200px;
+    animation-name: child;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    
+    
+}
+.child2{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    animation-name: child2;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+.child3{
+    width: 200px;
+    height: 200px;
+    background-color: burlywood;
+    animation-name: child3;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+.child4{
+    width: 200px;
+    height: 200px;
+    background-color: darkmagenta;
+}
+
+@keyframes child{
+    30%{
+        transform:skewX(30deg);
+    }
+    50%{
+        transform:skewX(-30deg);
+    }
+}
+@keyframes child2{
+    30%{
+        transform:skewy(30deg);
+    }
+    50%{
+        transform:skewy(-30deg);
+    }
+}
+@keyframes child3{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.child41{
+    margin-left:50px;
+    animation-name: child41;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes child41{
+    40%{
+        transform:scaleY(2);
+        width:80px;
+        height:20px;
+    }
+    60%{
+        transform:scaleY(2);
+        width:80px;
+        height:20px;
+    }
+}
+.child42{
+    margin-left:70px;
+    animation-name: child42;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes child42{
+    40%{
+        transform:scaleX(-0.5);
+        
+    }
+    60%{
+        transform:scaleX(0.5);
+        
+    }
+}
+.child43{
+    margin-left:70px;
+    animation-name: child43;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes child43{
+    40%{
+        transform:rotate(180deg);
+       
+    }
+    60%{
+        transform:rotate(200deg);
+       
+    }
+}
+.parent2{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.child41{
+    width: 200px;
+    height: 200px;
+    background-color: darkmagenta;
+}
