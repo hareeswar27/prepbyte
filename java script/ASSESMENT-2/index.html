@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="java script" href="./index.js">
+</head>
+<body>
+    <h1>java script assesment 2</h1>
+    <pre>
+        const Calculator = (A, B, C) => 
+{
+switch(true){
+  case A== '+':
+  let  sum=B+C;
+    return(sum);
+    break;
+    
+    case A== '-':
+  let  sub=B-C;
+    return(sub);
+    break;
+    
+    case A=='/':
+  let  div=B/C;
+    return(div);
+    break;
+    
+    case A=='*':
+  let  mul=B*C;
+    return(mul);
+    break;
+}
+}
+const Check_divisibility = (N) => {
+    if(N%6==0 && N%9==0){
+      return "Divisible by both";
+    }
+    else{
+      return "Not Divisible by both";
+    }
+    
+};
+const isEligible = (a) => {
+   if(a<18){
+     return "Not Eligible for Voting";
+   }
+   else{
+     return "Eligible for Voting"
+   }
+};
+const findRelation = (x,y) => {
+    if(x<y){
+    return ( x + " is smaller than " + y );
+    }
+    else if(x>y){
+      return(x +" is greater than "+ y);
+    }
+    else{
+      return(x+" is equal to "+y);
+    }
+};
+const findGrades = (a) => {
+switch(true)
+{
+  case(a<=10):
+  return "E"
+  break;
+  case(a>=11 && a<=20):
+  return "D"
+  break;
+  case(a>=21 && a<=30):
+    return"C"
+    break;
+    case(a>=31 && a<=40):
+    return"B"
+    break;
+    default:
+    return "A"
+}
+};
+const getValue = (a) => {
+    switch(true)
+{
+  case(a=='P'|| a=='p'):
+  return "PrepBytes"
+  break;
+  case(a=='Z'|| a=='z'):
+  return "Zenith"
+  break;
+  case(a=='E'|| a=='e'):
+    return"Expert Coder"
+    break;
+    case(a=='D'|| a=='d'):
+    return"Data Structure"
+}
+};
+const Max_out_of_three = (A,B,C) => {
+let  z = -1;
+  switch(true){
+    case(A>B && A>C):
+      return A;
+      break;
+      case(B>A && B>C):
+      return B;
+      break;
+      case(C>A && C>B):
+      return C;
+      break;
+      case(A==B && B==C && C==A):
+      return z;
+  }
+};
+const findSndSmallest = (x,y,z) => {
+    if((x>y&&y>z)||(z>y&&y>x))
+    return y;
+    else if((y>z&&z>x)||(x>z&&z>y))
+    return z;
+    else {
+      return x;
+    }
+};
+
+const Triangle_Check = (A,B,C) => {
+    if(A<90 && B<90 && C<90){
+      return "acute"
+    }
+    else{
+      return "obtuse"
+    }
+};
+    </pre>
+<script>
+const Calculator = (A, B, C) => 
+{
+switch(true){
+  case A== '+':
+  let  sum=B+C;
+    return(sum);
+    break;
+    
+    case A== '-':
+  let  sub=B-C;
+    return(sub);
+    break;
+    
+    case A=='/':
+  let  div=B/C;
+    return(div);
+    break;
+    
+    case A=='*':
+  let  mul=B*C;
+    return(mul);
+    break;
+}
+}
+const Check_divisibility = (N) => {
+    if(N%6==0 && N%9==0){
+      return "Divisible by both";
+    }
+    else{
+      return "Not Divisible by both";
+    }
+    
+};
+const isEligible = (a) => {
+   if(a<18){
+     return "Not Eligible for Voting";
+   }
+   else{
+     return "Eligible for Voting"
+   }
+};
+const findRelation = (x,y) => {
+    if(x<y){
+    return ( x + " is smaller than " + y );
+    }
+    else if(x>y){
+      return(x +" is greater than "+ y);
+    }
+    else{
+      return(x+" is equal to "+y);
+    }
+};
+const findGrades = (a) => {
+switch(true)
+{
+  case(a<=10):
+  return "E"
+  break;
+  case(a>=11 && a<=20):
+  return "D"
+  break;
+  case(a>=21 && a<=30):
+    return"C"
+    break;
+    case(a>=31 && a<=40):
+    return"B"
+    break;
+    default:
+    return "A"
+}
+};
+const getValue = (a) => {
+    switch(true)
+{
+  case(a=='P'|| a=='p'):
+  return "PrepBytes"
+  break;
+  case(a=='Z'|| a=='z'):
+  return "Zenith"
+  break;
+  case(a=='E'|| a=='e'):
+    return"Expert Coder"
+    break;
+    case(a=='D'|| a=='d'):
+    return"Data Structure"
+}
+};
+const Max_out_of_three = (A,B,C) => {
+let  z = -1;
+  switch(true){
+    case(A>B && A>C):
+      return A;
+      break;
+      case(B>A && B>C):
+      return B;
+      break;
+      case(C>A && C>B):
+      return C;
+      break;
+      case(A==B && B==C && C==A):
+      return z;
+  }
+};
+const findSndSmallest = (x,y,z) => {
+    if((x>y&&y>z)||(z>y&&y>x))
+    return y;
+    else if((y>z&&z>x)||(x>z&&z>y))
+    return z;
+    else {
+      return x;
+    }
+};
+
+const Triangle_Check = (A,B,C) => {
+    if(A<90 && B<90 && C<90){
+      return "acute"
+    }
+    else{
+      return "obtuse"
+    }
+};
+</script>
+</body>
+</html>
