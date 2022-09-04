@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function hari(){
+            console.log("hello")
+        }
+        let call = (a , b) => {
+            return a+b
+        }
+        let ans=call(3 , 4);
+        console.log(ans)
+        hari()
+
+function fact(n){
+    let a=1,i;
+    for(i=2;i<=n;i++)
+        a=a*i;
+        return a;
+}
+let b=fact(4)
+console.log(b)
+    </script>
+    <pre> 
+        Create one function with zero parameter having a console statement;
+
+        function hari(){
+            console.log("hello")
+        }
+        Create one function which takes two values as a parameter and print the sum of them as "Sum of 3, 4 is 7"
+        Create one arrow function
+        let call = (a , b) => {
+            return a+b
+        }
+        let ans=call(3 , 4);
+        console.log(ans)
+        hari()
+
+        "Print output: undefined
+var x = 21;
+var girl = function () {
+    console.log(x);
+    var x = 20;
+};
+girl ();"
+
+"Print output: undefined,21
+var x = 21;
+girl ();
+console.log(x)
+function girl() {
+    console.log(x);
+    var x = 20;
+};"
+
+"Print output:uncaught referenceError: a is not defined
+
+var x = 21;
+a();
+b();
+console.log(a);
+a = function() {
+    
+   x = 20;
+  console.log(x);
+};
+b = function() {
+    
+    x = 40;
+   console.log(x);
+};"
+Write a function that accepts parameter n and returns factorial of n
+function fact(n){
+    let a=1,i;
+    for(i=2;i<=n;i++)
+        a=a*i;
+        return a;
+}
+let b=fact(4)
+console.log(b)
+    </pre>
+</body>
+</html>
