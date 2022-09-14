@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        1.const countCharacters = (S) => 
+        {
+            let A = [];
+                let countB = 0, countD = 0;
+                for(let i = 0; i < S.length; i++){
+                  if(S.charAt(i) == "A")
+                  {
+                    countB = countB+1;
+                  }
+                  else if(S.charAt(i) == "D")
+                  {
+                    countD = countD+1;
+                  }
+                }
+                A.push(countB);
+                A.push(countD);
+                return (A);
+        };
+        
+        2.var Count_Occ = (s) => 
+        {
+         let count=1;
+                    let str='';
+                    let op="";
+                    for(let i=0;i1;){
+                        str=s[i];
+                        op=op+" "+s[i]+count;
+                        s=s.replace(str,' ');
+                        s=s.split(str).join('');
+                      }
+                      count=1;
+                    }
+                    return op.split(' ').sort().join('');   
+        };
+        
+        3.var Count_Vowels= (S) => 
+        {
+           let a = S.toLowerCase();
+                                let count = 0;
+                                const vowels = ['a' , 'e', 'i', 'o', 'u'];
+                                for(let i = 0; i < a.length; i++){
+                                  let b = vowels.includes(a[i])
+                                  if(b === true){
+                                      count++;
+                                  }
+                              }
+                                return count;   
+        };
+
+        4.var Concatenate_Strings = (S1, S2) => 
+        {
+            return S1+S2;  
+        };
+
+        5.
+        const findLength = (S) => 
+        {
+        let S1 = (S.length)
+                            return S1
+        };
+
+        6.var Game_Winner = (S) => 
+        {
+          let countA = 0 , 
+        countD = 0;
+        for(let i = 0; i < S.length; i++)
+        {
+        if(S[i] == "A"){
+        countA++;
+        }
+        else if(S[i] == "D")
+        {
+        countD++;
+        }
+        }
+        if(countA > countD){
+        return "Aditya";
+        }
+        else if(countA < countD){
+        return "Danish";
+        }
+        else{
+        return "Draw";
+        }
+        }
+
+        7.const joinStrings = (S, P) => 
+        {
+            let A = S + P ;
+             return A;
+        };
+
+        8.
+
+
+       9. var Reverse_String = (str) => 
+{
+ let reverse = "";
+          let j = str.length - 1;
+          for (let i=j ; i >=0 ; i--){
+            reverse = reverse+str[i];
+          }
+          return reverse;    
+};
+
+10.var String_Match = (S1,S2) => 
+{
+  let A = S1.localeCompare(S2);
+ if (A === 0){
+  return "YES";
+}
+else{
+    return "NO";
+    }    
+};
+
+11.var Replace = (S, pattern , text) => 
+{
+       let a = S.replace(pattern,text)
+                      return a
+};
+
+12.var Split_the_string = (S) => 
+{
+  let a =S;
+ let result = S.split(' ')
+  return result;
+        
+};
+
+13. let str = S.toLowerCase();
+let count = 0;
+let vowels = ['a' , 'e', 'i', 'o', 'u'];
+for(let i = 0; i < str.length; i++){
+ let conun = vowels.includes(str[i])
+ if(conun === true){
+  count++;
+ }
+  }
+  return count;
+ };
+var Count_Consonants= (S) => 
+{
+let str = S.toLowerCase();
+ let count = 0;
+let vowels = ['a' , 'e', 'i', 'o', 'u'];
+ for(let i = 0; i < str.length; i++){
+  let conun = vowels.includes(str[i])
+if(conun !== true){
+count++;
+}
+}
+ return count;     
+  };
+    </pre>
+</body>
+</html>
