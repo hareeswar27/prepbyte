@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: magenta;
+            margin: 5px;
+        }
+        #parent{
+            display: flex;
+            flex-direction: row;
+        }
+        #clock{
+            font-family: system-ui;
+            background: #f06d06;
+            color: rgb(6, 6, 6);
+            text-align: center;
+        }
+    </style>
+    <p id="text">hello</p>
+    <h1>hello</h1>
+    <b class="box">bold</b>
+    <div id="parent">
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+    </div>
+    <button onclick="func()" id="but">change flex directiom</button>
+    <p id="change">Hello world</p>
+    <button onclick="func1()">Replace Text</button>
+    <div id = "clock" onload="currentTime()"></div>
+    <p> Select one from the given options:
+        <select class="select1">
+            <option value=></option>
+            <option value=2020-2021>2020-2021</option>
+            <option value=2021-2022>2021-2022</option>
+        </select>
+    </p>
+    <p> The value of the option selected is:
+        <span class="output"></span>
+ 
+    </p>
+
+<button onclick="getOption()"> Check option </button>
+    <pre>
+    
+       1. Write the code to access element which is having id as "text"
+
+       let para= document.getElementById('text')
+
+       2.Write the code to access element which is having tag as "h1"
+       
+       let hed=document.getElementsByTagName('h1')
+       console.log(hed[0].innerText);
+
+       3.Write the code to access element which is having class as "box"
+      
+       let b =document.getElementsByClassName('box')
+
+       4.Change the heading from ""Hello"" to ""Hello World"" using DOM functions"
+       
+       setTimeout(function(){
+        hed[0].innerText='hello world'
+        },5000)
+
+        5.Add one style attribute and give text color as red and id attribute and give the id value as ""heading"" in the above given h1 tag using DOM functions"
+   
+        hed[0].style.color='red'
+        hed[0].id='heading'
+
+        6.Create three cards on HTML page and arrange them using flex property in row or horizontal direction and also create button at the bottom named "Change Flex direction". When user clicks on this button, the cards arrangement should be changed to vertical direction.
+        function func(){
+            let par =document.getElementById('parent')
+            par.style.flexDirection = "column"
+        }
+        
+        7.Create an HTML page having content as Hello world and a button named Replace Text. When user will click on this button page content should be changed to "Welcome to Elevation academy"
+        function func1(){
+            let hello=document.getElementById('change')
+            hello.innerText='Welcome to Elevation academy'
+            hello.style.color='green'
+        
+        }
+        
+        8.Create a select drop down for selecting Year 20-21, 21-22 etc. Print the item text selected
+
+        function getOption() {
+            selectElement = document.querySelector('.select1');
+            output = selectElement.value;
+            document.querySelector('.output').textContent = output;
+        }
+
+        9.Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second
+        function currentTime() {
+            let date = new Date(); 
+            let hh = date.getHours();
+            let mm = date.getMinutes();
+            let ss = date.getSeconds();
+            let session = "AM";
+          
+            if(hh === 0){
+                hh = 12;
+            }
+            if(hh > 12){
+                hh = hh - 12;
+                session = "PM";
+             }
+           
+             hh = (hh < 10) ? "0" + hh : hh;
+             mm = (mm < 10) ? "0" + mm : mm;
+             ss = (ss < 10) ? "0" + ss : ss;
+              
+             let time = hh + ":" + mm + ":" + ss + " " + session;
+          
+            document.getElementById("clock").innerText = time; 
+            setTimeout(function(){ currentTime() }, 1000);
+          }
+          
+          currentTime();
+          
+    </pre>
+
+    <script src="./index.js"></script>
+</body>
+</html>
