@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+       1.function counter(){
+        var counter = 0;
+    
+        function IncreaseCounter() {
+            return counter += 1;
+        };
+    
+        return IncreaseCounter;
+    }
+    
+    var counter = Counter();
+    alert(counter());
+    alert(counter());
+    alert(counter());
+    alert(counter());
+    OUTPUT:uncaught referenceerror: counter is not defined
+    
+    2.let count = 0;
+    (function () {
+      if (count === 0) {
+        let count = 1;
+        console.log(count); // What is logged?
+      }
+      console.log(count); // What is logged?
+    })();
+    OUTPUT:
+    1
+    0
+
+    3.for (var i = 0; i < 3; i++) {
+        setTimeout(function log() {
+          console.log(i); // What is logged?
+        }, 1000);
+      }
+      OUTPUT:
+      3 //PRINTS 3 TIMES//
+
+      4.var a = 12;
+      (function(){
+          alert(a);
+      })();
+      Output:popup of 12
+
+      5.var a = 10;
+      var x = (function () {
+        var a = 12;
+        return function () {
+          alert(a);
+        };
+      })(); 
+      x();
+      Output:popup of 12
+
+      6.var globalVar = ""xyz"";
+
+      (function outerFunc(outerArg) {
+          var outerVar = 'a';
+          
+          (function innerFunc(innerArg) {
+          var innerVar = 'b';
+          
+          console.log(
+              ""outerArg = "" + outerArg + ""\n"" +
+              ""innerArg = "" + innerArg + ""\n"" +
+              ""outerVar = "" + outerVar + ""\n"" +
+              ""innerVar = "" + innerVar + ""\n"" +
+              ""globalVar = "" + globalVar);
+          
+          })(456);
+      })(123);
+
+      output: uncaught syntaxerror: unexpected identifier 'xyz'
+      7. Take a variable in outer function and create an inner function to increase the counter every time it is called
+function outer(){
+let a = 0;
+function inner(){
+return a =a+1
+ }
+ return inner;
+}
+outer = outer();
+console.log(outer())
+console.log(outer())
+console.log(outer())
+console.log(outer())
+console.log(outer())
+
+      output:
+      1
+      2
+      3
+      4
+      5
+      
+      8. Write a code to calculate area of a rectangle using inner function. In this case outer function should accept parameter length and inner function should accept parameter breadth.
+      function rectangle(length)
+{
+function area(breath){
+    let a=length*breath;
+    console.log(a)
+}
+area(20)
+ }
+ rectangle(4)
+    </pre>
+
+    <script src="./index.js"></script>
+</body>
+</html>
