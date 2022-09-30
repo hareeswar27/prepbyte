@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<pre>
+ 1.   Write one example explaining how you can write a callback function ?
+function hello(){
+console.log('hello')
+}
+hello()
+
+2."Write callback function to print numbers from 1 to 7, in which 1 should be printed after 1 sec , 2 should be printed after 2 sec, 3 should be printed after 3 sec and so on. 
+
+setTimeout(()=>{
+    console.log("1")},1000)
+     setTimeout(()=>{
+    console.log("2")},2000)
+    setTimeout(()=>{
+    console.log("3")},3000)
+     setTimeout(()=>{
+    console.log("4")},4000)
+    setTimeout(()=>{
+    console.log("5")},5000)
+    setTimeout(()=>{
+    console.log("6")},6000)
+    setTimeout(()=>{
+    console.log("7")},7000)
+
+3.Create a promise function accepting a argument, if yes is passed to the function then it should go to resolved state and print Promise Resolved, and if nothing is passed then it should go to reject state and catch the error and print Promise Rejected 
+
+let a = new Promise((resolve,reject)=>{
+    let check = ""
+    if(check == ""){
+        resolve("promise Resolved")
+    }
+    else reject("promise Reject")
+
+})
+a.then((b)=>{console.log(b)}).catch((b)=>{console.log(b)})
+
+4.Create examples to explain callback function
+
+function Oddeven(number,a){
+    let result =(number%2 == 0) ? 'Even' : 'Odd';
+    a(number,result);
+}
+Oddeven(1998,(number,result)=>{
+    console.log(number + ' = ' +  result);    
+})
+
+5.Create examples to explain promises function
+let a = new Promise((resolve,reject)=>{
+    let check = ""
+    if(check == ""){
+        resolve("promise Resolved")
+    }
+    else reject("promise Reject")
+
+})
+a.then((b)=>{console.log(b)}).catch((b)=>{console.log(b)})
+
+6.Create examples to explain async await function
+
+async function callback(){
+    let a = new Promise((resolve,reject)=>{
+    let check = ""
+    if(check == ""){
+    resolve("promise Resolved")
+    }
+    else reject("promise Reject")
+    })
+    await a.then((b)=>{console.log(b)}).catch((b)=>{console.log(b)})
+    }
+    callback()
+7.Create examples to explain promise.all function
+    let a = 'hello';
+let b = new Promise((resolve,reject)=>{
+    let check = ""
+    if(check == ""){
+    resolve("promise Resolved")
+    }
+    else reject("promise Reject")
+    })
+Promise.all([a,b]).then((a) => {
+console.log(a);
+});
+
+</pre>
+
+    <script src="./index.js"></script>
+</body>
+</html>
