@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>1. Difference between “ == “ and “ === “ operators.</h3>
+    <p>The equality operator in javascript is used to compare if two values are equal. <br>
+       The comparison is made by == and === operators in javascript. <br>
+       The main difference between the == and === operator in javascript is that the == operator does the type conversion of the operands before comparison, whereas the === operator compares the values as well as the data types of the operands</p>
+    <p><h3>2. What is the spread operator?</h3> <br>
+        The JavaScript spread operator ( ... ) allows us to quickly copy all or part of an existing array or object into another array or object
+    </p>
+    <p><h3>3.What are the differences between var, let and const?</h3> <br>
+        <b>var keyword in JavaScript:</b> The var is the oldest keyword to declare a variable in JavaScript. <br>
+        <b>Scope:</b> Global scoped or function scoped. The scope of the var keyword is the global or function scope. It means variables defined outside the function can be accessed globally, and variables defined inside a particular function can be accessed within the function. <br>
+        <strong>Example 1:</strong> Variable 'a' is declared globally. So, the scope of the variable ‘a’ is global, and it can be accessible everywhere in the program. The output shown is in the 
+        <pre>
+            var a = 10
+            function f(){
+                console.log(a)
+            }
+        f();
+        console.log(a);
+        Output: 
+        10
+        10
+    </pre>
+        <b>Example 2:</b> The variable ‘a’ is declared inside the function. If the user tries to access it outside the function, it will display the error. Users can declare the 2 variables with the same name using the var keyword. Also, the user can reassign the value into the var variable. The output shown in the <br>
+        <pre>
+            function f() {
+ 
+                // It can be accessible any
+                // where within this function
+                var a = 10;
+                console.log(a)
+            }
+            f();
+         
+            // A cannot be accessible
+            // outside of function
+            console.log(a);
+        </pre>
+        
+    </p>
+    <p>
+        <pre>
+        <b>let keyword in JavaScript:</b> The let keyword is an improved version of the var keyword. 
+
+        Scope: block scoped: The scope of a let variable is only block scoped. It can’t be accessible outside the particular block ({block}). Let’s see the below example.
+        
+        <b>Example 1:</b> The output is shown in the console.
+        let a = 10;
+    function f() {
+        let b = 9
+        console.log(b);
+        console.log(a);
+    }
+    f();
+    <b>Output:</b>
+    9
+    10
+        </pre>
+    </p>
+    <p>
+        const keyword in JavaScript: The const keyword has all the properties that are the same as the let keyword, except the user cannot update it <br>
+       <b> Scope:</b> block scoped: When users declare a const variable, they need to initialize it, otherwise, it returns an error. The user cannot update the const variable once it is declared. 
+<br>
+<b>Example 1:</b> We are changing the value of the const variable so that it returns an error. The output is shown in the console.
+    <pre>
+        <script>
+            const a = 10;
+            function f() {
+                a = 9
+                console.log(a)
+            }
+            f();
+        </script>
+        Output:
+        
+        a=9
+        TypeError:Assignment to constant variable.
+
+    </pre>
+</p>
+<h3>4. What is execution context</h3>
+<pre>
+    The Execution Context contains the code that's currently running, and everything that aids in its execution. 
+    During the Execution Context run-time, the specific code gets parsed by a parser, 
+    the variables and functions are stored in memory, executable byte-code gets generated, and the code gets executed.
+
+</pre>
+<h3>
+5. What is meant by first class functions
+</h3> 
+<pre>
+A programming language is said to have First-class functions when functions in that language are treated like any other variable. 
+For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.
+</pre>
+<h3>6. What are closures? Give an example of closure</h3>
+<pre>
+A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). 
+In other words, a closure gives you access to an outer function's scope from an inner function. 
+In JavaScript, closures are created every time a function is created, at function creation time.
+</pre>
+<h3>7. Explain call(), apply() and, bind() methods. Give an example of call(), apply(), bind()</h3>
+<pre>
+    <b>Call( ), Bind( ), and Apply( )</b> to Rescue
+    We use call, bind and apply methods to set the this keyword independent of how the function is called. This is especially useful for the callbacks (as in the above example).
+    
+    We know that functions are a special kind of objects in JavaScript. So they have access to some methods and properties. To prove functions are objects, we can do something like this, for example:    
+    function greeting() {
+        console.log('Hello World');
+      }
+      greeting.lang = 'English';
+      // Prints 'English'
+      console.log(greeting.lang);
+      JavaScript also provides some special methods and properties to every function object. So every function in JavaScript inherits those methods. Call, bind, and apply are some of the methods that every function inherits.
+</pre>
+<p><b>Bind( )</b>
+    The bind method creates a new function and sets the this keyword to the specified object.</p>
+    <b>Syntax:</b><br>
+    function.bind(thisArg, optionalArguments)
+    <p>
+        <b>Call ( )</b>
+The call method sets the this inside the function and immediately executes that function.
+
+The difference between call() and bind() is that the call() sets the this keyword and executes the function immediately and it does not create a new copy of the function, while the bind() creates a copy of that function and sets the this keyword.
+    </p>
+    <b>Syntax:
+        function.call(thisArg, arg1, agr2, ...)</b>
+<p>
+    
+    <b>Apply ( )</b>
+    The apply() method is similar to call(). The difference is that the apply() method accepts an array of arguments instead of comma separated values. 
+</p>
+<b>Syntax:
+    function.apply(thisArg, [argumentsArr])</b>
+</body>
+</html>
