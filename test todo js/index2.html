@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/58098877f2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./test2.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="bigbox">
+        <div class="left-right"> 
+          <div class="left" id="left">
+            <h1>Task <span style="font-weight: 40" >List</span> </h1>
+          </div>
+          <div>
+            <!-- <span><i class="fas fa-plus-circle" onclick=""></i></span> -->
+            <span id="right" onclick="box()"> Add Item</span>
+          </div>
+        </div><br><br>
+        <div id="msg">
+          <p>No Item in the todo list</p>
+        </div>
+        <div id="cards"></div>
+      </div>
+    
+      
+      <div id="popup">
+     <div class="popup-heading">
+     <h1>Add New List</h1>
+     </div>
+     <div> <input type="text" name="ListName" id="cardname" placeholder="" value=""/> </div>
+     <br />
+    <div class="popup-button">
+          <p id="addbtn" onclick="smallCard()">ADD</p>
+          <p id="closebtn" onclick="closeDataObj()">Close</p>
+        </div>
+      </div>
+    
+ 
+      
+      <div id="secondpopup">
+        <div class="secondpopup-heading">
+          <h1>Add New Item</h1>
+        </div>
+        <div>
+          <input type="text" name="ListName" id="items" placeholder="" value="" />
+        </div>
+        <br />
+        <div class="popup-button">
+          <p id="additems">ADD</p>
+          <p>Close</p>
+        </div>
+      </div>
+    <script src="./test2.js"></script>
+</body>
+</html>

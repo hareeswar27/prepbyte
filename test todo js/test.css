@@ -1,0 +1,97 @@
+.hed{
+    display: flex;
+    justify-content: space-around;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+.todo-container{
+  display: flex;
+  justify-content: space-around;
+   width: auto;
+   height: auto;
+}
+.todo_list{
+    min-width: 30%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.todo-item{
+   
+    list-style:none ;
+
+  
+}
+.todo{
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: orange;
+    width: 300px;
+    height: 250px;
+    margin: 10px;
+  
+}
+.todo li{
+    flex: 1;
+}
+.trash-btn, .complete-btn{
+    background: green;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+
+}
+.complete-btn{
+    background: blue;
+    width: 25px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.trash-btn{
+    background:red ;
+    width: 25px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.material-symbols-outlined{
+    pointer-events: none;
+}
+.completed{
+    text-decoration: line-through;
+
+}
+.parent{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.input-in-box{
+    background: orange;
+    color: white;
+    width: 275px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.innerBut-box{
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
