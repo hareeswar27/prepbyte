@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY2</title>
+</head>
+<body>
+    <h2>DAY2</h2>
+    <p>1. What is creation phase and execution phase?</p>
+    <p><b>creation phase:</b><br>
+        In the creation phase, the Execution Context is first associated with an Execution Context Object (ECO). The Execution Context Object stores a lot of important data which the code in the Execution Context uses during its run-time.
+        <br><b>The Execution Phase</b><br>
+    This is the stage where the actual code execution begins. Up until this point, the VO contained variables with the values of undefined . If the code is run at this point it is bound to return errors, as we can't work with undefined values.
+    </p>
+    <p>2. What are objects in javascript?</p>
+    <p>In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup, for example. A cup is an object, with properties. A cup has a color, a design, weight, a material it is made of, etc. The same way, JavaScript objects can have properties, which define their characteristics</p>
+    <p>3. What are function constructors?</p>
+    <p>A constructor is a special function that creates and initializes an object instance of a class. In JavaScript, a constructor gets called when an object is created using the new keyword. The purpose of a constructor is to create a new object and set values for any existing object properties.</p>
+    <p>4. Explain prototypes</p>
+    <p>Every object in JavaScript has a built-in property, which is called its prototype. The prototype is itself an object, so the prototype will have its own prototype, making what's called a prototype chain. The chain ends when we reach a prototype that has null for its own prototype.</p>
+    <p>5. What is prototype chain</p>
+    <p>Each object has a private property which holds a link to another object called its prototype. That prototype object has a prototype of its own, and so on until an object is reached with null as its prototype. By definition, null has no prototype, and acts as the final link in this prototype chain.</p>
+    <p>6.Give an example of inheritance using function constructor</p>
+    <p>Here, we will discuss inheriting a constructor function in JavaScript. Constructor functions define the prototype of the properties an object will contain. Using the constructor function, we can create a new object after passing the required parameters.
+
+        Inheriting a previously defined constructor function means using the parameters of the previously defined function along with adding some new parameters to the newly defined constructor function. For this, we need to use the call() function which allows us to call a function defined somewhere else in the current context. 
+    </p>
+    <b>Syntax:
+
+        myFunction.call( this, property1, property2, ... , propertyN )</b>
+        <pre>
+          
+                function Employee(name, age, gender, id) {
+                    this.name = name;
+                    this.age = age;
+                    this.gender = gender;
+                    this.id = id;
+                };
+          
+                function Developer(name, age, gender, id, 
+                specialization) {
+          
+                    // Calling Employee constructor function
+                    Employee.call(this, name, age, gender, id);
+          
+                    // Adding a new parameter
+                    this.specialization = specialization;
+                }
+                console.log(Employee.prototype);
+                console.log(Developer.prototype);
+            
+        </pre>
+        <b><pre>
+Output:
+
+Object
+constructor: ƒ Employee(name, age, gender, id)
+[[Prototype]]: Object
+
+Object
+constructor: ƒ Developer(name, age, gender, id, specialization)
+[[Prototype]]: Object
+        </pre></b>
+<p>7. What are callbacks?</p>
+<p>A callback is a function passed as an argument to another function
+
+    This technique allows a function to call another function
+    
+    A callback function can run after another function has finished</p>
+<b>
+    <pre>
+        Example:
+        function myFirst() {
+            myDisplayer("Hello");
+          }
+          
+          function mySecond() {
+            myDisplayer("Goodbye");
+          }
+          
+          myFirst();
+          mySecond();    
+    </pre>
+</b>
+    </body>
+</html>

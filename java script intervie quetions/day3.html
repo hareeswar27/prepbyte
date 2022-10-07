@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p>1. What is the use of setTimeout</p>
+<p>setTimeout is a commonly used function in JavaScript. It sets a timer (a countdown set in milliseconds) for the execution of a callback function, calling the function upon completion of the timer. The setTimeout method can prove handy in various situations.</p>
+<p>2. What is an event loop and call stack </p>
+<p>Event loop: An event loop is something that pulls stuff out of the queue and places it onto the function execution stack whenever the function stack becomes empty.</p>
+<p>A call stack is a mechanism for an interpreter (like the JavaScript interpreter in a web browser) to keep track of its place in a script that calls multiple functions — what function is currently being run and what functions are called from within that function, etc.</p>
+<p>3. What are arrow functions?</p>
+<p>Arrow function is one of the features introduced in the ES6 version of JavaScript. It allows you to create functions in a cleaner way compared to regular functions. For example, This function // function expression
+    <br> let x = function(x, y) { return x * y; }</p>
+<p>4. What is a Temporal Dead Zone?</p>
+<p>The let and const variables are not accessible before they are initialized with some value, and the phase between the starting of the execution of block in which the let or const variable is declared till that variable is being initialized is called Temporal Dead Zone for the variable.</p>
+<p>5. What is hoisting?</p>
+<p>JavaScript Hoisting refers to the process whereby the interpreter appears to move the declaration of functions, variables or classes to the top of their scope, prior to execution of the code. Hoisting allows functions to be safely used in code before they are declared</p>
+<p>6. What is the DOM?</p>
+<p>The DOM defines a standard for accessing documents: "The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document."</p>
+<p>7. Difference between undefined vs not defined vs NaN</p>
+<p><b>undefined:</b> It is a JavaScript keyword that has a special meaning. Everything which gets a space in memory will contain undefined until we assign a value to that memory space.</p>
+<p><pre>example:console.log(a);
+        var a = 5;
+        console.log(a);</pre></p>
+        <pre>
+Output (In console):
+undefined
+5
+ </pre>
+ <p>NAN: NaN is a property of the global object. In other words, it is a variable in global scope. The initial value of NaN is Not-A-Number — the same as the value of Number. NaN . In modern browsers, NaN is a non-configurable, non-writable property.</p>
+</body>
+</html>
