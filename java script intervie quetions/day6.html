@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.but{
+    background: cornflowerblue;
+    width: 100px;
+    height: 25px;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+</style>
+<body>
+    <h1>first h1</h1>
+    <h2>1.Create a button , on click of which new Heading tag h1 should be added with text as "MERN stack" on the screen above button</h2>
+    <h1 id="hed"></h1>
+    <div class="but" onclick="newfun()">hello</div>
+    <h2>2. Write code to get 1st H1 element from a webpage using DOM</h2>
+    <p><pre>
+ let firstH1Element = document.getElementsByTagName('h1')[0].innerText
+ console.log(firstH1Element);
+    </pre></p>
+<h2>3.Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second</h2>
+<p id="time"></p>
+<h2>4. Create an HTML page having content as Hello world and a button named Replace Text. When user will click on this button page content should be changed to "Welcome to Elevation academy"</h2>
+<p id="change">hello world</p>
+<div class="but" onclick="changeText()">click</div>
+<h2>5. Create an HTML page having content as Hello world and a button named "Hide Text." When user will click on this button hide the "Hello World" text</h2>
+<p id="hidetext">hello world</p>
+<div class="but" onclick="hidetext()">HIde text</div>
+<h2>6. Given an array of 0's and 1's find out number of 0's</h2>
+<pre>let a=[1,1,1,1,0,1,0,0,0,0,1,1,0]
+    let b=0;
+    for(let i=0;i<a.length;i++){
+        if(a[i]==0){
+            b++
+        }
+    }</pre>
+
+    <h2>7. Given an array find out total no. of odd and even nos.</h2>
+
+<p>
+    <pre>
+let a=[54,45,54,5,5121,5,8548,5,8461,64,641,61,65,1,65,641,65]
+let even=0;
+let odd=0
+for(let i=0;i<a.length;i++){
+    if(a[i]%2==0){
+        even++
+    }
+    if(a[i]%2==1){
+        odd++
+    }
+}
+    </pre>
+</p>
+<h2>8. Given a string find out number of vowels </h2>
+
+<p><pre>
+    function getVowels(str) {
+        var vowelsCount = 0;
+      
+        //turn the input into a string
+        var string = str.toString();
+      
+        //loop through the string
+        for (var i = 0; i <= string.length - 1; i++) {
+      
+        //if a vowel, add to vowel count
+          if (string.charAt(i) == "a" || string.charAt(i) == "e" || string.charAt(i) == "i" || string.charAt(i) == "o" || string.charAt(i) == "u") {
+            vowelsCount += 1;
+          }
+        }
+        return vowelsCount;
+      }
+      
+      let str= getVowels('helloworld aeiou')
+      console.log(str);
+</pre></p>
+
+<script>
+ function  newfun(){
+    document.getElementById('hed').innerText='MERN stack'
+ }
+ let firstH1Element = document.getElementsByTagName('h1')[0].innerText
+ console.log(firstH1Element);
+
+setInterval(() => {
+   let time= new Date();
+   let hrs= time.getHours();
+   let min= time.getMinutes();
+   let sec=time.getSeconds();
+   let day="AM"
+   document.getElementById('time').innerText=hrs + ':' + min + ':'+ sec
+}, 1000);
+
+function changeText(){
+    document.getElementById('change').innerText='Welcome to Elevation academy'
+}
+
+function hidetext(){
+    document.getElementById('hidetext').style.visibility='hidden'
+}
+
+let a=[54,45,54,5,5121,5,8548,5,8461,64,641,61,65,1,65,641,65]
+let even=0;
+let odd=0
+for(let i=0;i<a.length;i++){
+    if(a[i]%2==0){
+        even++
+    }
+    if(a[i]%2==1){
+        odd++
+    }
+}
+console.log(even,odd);
+
+function getVowels(str) {
+  var vowelsCount = 0;
+
+  //turn the input into a string
+  var string = str.toString();
+
+  //loop through the string
+  for (var i = 0; i <= string.length - 1; i++) {
+
+  //if a vowel, add to vowel count
+    if (string.charAt(i) == "a" || string.charAt(i) == "e" || string.charAt(i) == "i" || string.charAt(i) == "o" || string.charAt(i) == "u") {
+      vowelsCount += 1;
+    }
+  }
+  return vowelsCount;
+}
+
+let str= getVowels('helloworld aeiou')
+console.log(str);
+</script>
+</body>
+</html>

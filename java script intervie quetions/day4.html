@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>1. How many operators do we have in JS ?</h2>
+    <p>An operator is capable of manipulating a certain value or operand. Operators are used to perform specific mathematical and logical computations on operands. In other words, we can say that an operator operates the operands. In JavaScript operators are used for compare values, perform arithmetic operations etc.</p>
+    <ul>
+       <li>Assignment operators</li>
+       <li>String operators</li>
+       <li>Logical operators</li>
+       <li>Bitwise operators</li>
+       <li>Special operator</li>
+    </ul>
+    <h2>2. What are pure functions?</h2>
+    <p>It is a function that produces the same output for the same input. It means it returns the same result when you pass the same arguments. A pure function shouldn't have any side effects to change the expected output.</p>
+    <pre>
+    function purefunction(a,b){
+        console.log(a+b)
+    }
+    purefunction(1,2)
+    output:3
+    </pre>
+    <h2>3. What is callback hell</h2>
+    <p>Callback hell is when you nest things inside of each other because they all depend on the previous callback to being called before it can then go ahead and run, when you need to run things in sequence, one after the other. It is also rendered to as "Christmas Tree" code because of how indented the code is sideways.</p>
+    <h2>4. What are promises and why do we need them?</h2>
+    <p>Promises are used to handle asynchronous operations in JavaScript. They are easy to manage when dealing with multiple asynchronous operations where callbacks can create callback hell leading to unmanageable code.</p>
+    <h2>5. What is promise chaining</h2>
+    <p>Promise chaining: Promise chaining is a syntax that allows you to chain together multiple asynchronous tasks in a specific order. This is great for complex code where one asynchronous task needs to be performed after the completion of a different asynchronous task.</p>
+    <h2>6. Give an example of async/await</h2>
+    <p><pre>
+        const printNumbers=(time,value)=>{
+            return new Promise((resolved,rejected)=>{
+                setTimeout(() => {
+                    console.log(value);
+                    resolved();
+                }, time);
+            })
+        }
+        async function newfunction(){
+            await printNumbers(5000,'5')
+            await printNumbers(4000,'4')
+            await printNumbers(3000,'3')
+            await printNumbers(2000,'2')
+    
+        }
+        newfunction()
+    </pre></p>
+    <h2>7. What is the purpose of async/await keywords?</h2>
+    <p>
+        to understad code easyly
+    </p>
+
+
+    <script>
+   const printNumbers=(time,value)=>{
+        return new Promise((resolved,rejected)=>{
+            setTimeout(() => {
+                console.log(value);
+                resolved();
+            }, time);
+        })
+    }
+    async function newfunction(){
+        await printNumbers(5000,'5')
+        await printNumbers(4000,'4')
+        await printNumbers(3000,'3')
+        await printNumbers(2000,'2')
+
+    }
+    newfunction()
+       
+    </script>
+</body>
+</html>
